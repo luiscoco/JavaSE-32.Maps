@@ -8,15 +8,17 @@ Use **TreeMap** if you need elements sorted in a natural order.
 
 Use **LinkedHashMap** if you need to maintain the order of insertion.
 
-## --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 In Java, the term "Map" refers to a data structure that stores key-value pairs. 
 
 Each key is associated with exactly one value, and you can use the key to retrieve the corresponding value. 
 
 Java provides several implementations of the Map interface, but the most commonly used ones are: HashMap, TreeMap, and LinkedHashMap.
-## --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 1. HashMap
+
+Use **HashMap** if you need fast access to elements and order doesn't matter.
 
 ```java
 import java.util.HashMap;
@@ -45,6 +47,8 @@ public class HashMapExample {
 
 ## 2. TreeMap
 
+Use **TreeMap** if you need elements sorted in a natural order.
+
 ```java
 import java.util.Map;
 import java.util.TreeMap;
@@ -71,6 +75,8 @@ public class TreeMapExample {
 ```
 
 ## 3. LinkedHashMap
+
+Use **LinkedHashMap** if you need to maintain the order of insertion.
 
 ```java
 import java.util.LinkedHashMap;
@@ -152,6 +158,8 @@ In Java, HashMap, TreeMap, and LinkedHashMap are all implementations of the Map 
 
 ## HashMap
 
+Use **HashMap** if you need fast access to elements and order doesn't matter.
+
 Does not guarantee any specific order of elements.
 
 Offers constant-time performance for basic operations (add, remove, and get), assuming the hash function distributes the elements properly.
@@ -169,6 +177,8 @@ System.out.println(hashMap); // Output order may vary
 
 ## TreeMap
 
+Use **TreeMap** if you need elements sorted in a natural order.
+
 Maintains elements in natural order (ascending order for numeric types, lexicographic order for strings).
 
 Slower insertion and removal compared to HashMap, but the elements are ordered.
@@ -183,6 +193,8 @@ System.out.println(treeMap); // Output in ascending order
 ```
 
 ## LinkedHashMap
+
+Use **LinkedHashMap** if you need to maintain the order of insertion.
 
 Maintains the order of elements based on the order they were inserted.
 
