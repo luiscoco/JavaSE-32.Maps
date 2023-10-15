@@ -1,12 +1,14 @@
 # JavaSE-Maps
 
-In Java, the term "Map" refers to a data structure that stores key-value pairs. Each key is associated with exactly one value, and you can use the key to retrieve the corresponding value. Java provides several implementations of the Map interface, but the most commonly used ones are HashMap, TreeMap, and LinkedHashMap.
+In Java, the term "Map" refers to a data structure that stores key-value pairs. 
 
-Let me show you some basic examples:
+Each key is associated with exactly one value, and you can use the key to retrieve the corresponding value. 
 
-1. HashMap
-java
-Copy code
+Java provides several implementations of the Map interface, but the most commonly used ones are HashMap, TreeMap, and LinkedHashMap.
+
+## 1. HashMap
+
+```java
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,9 +31,11 @@ public class HashMapExample {
         }
     }
 }
-2. TreeMap
-java
-Copy code
+```
+
+## 2. TreeMap
+
+```java
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -54,10 +58,11 @@ public class TreeMapExample {
         }
     }
 }
+```
 
 ## 3. LinkedHashMap
-java
-Copy code
+
+```java
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -80,10 +85,14 @@ public class LinkedHashMapExample {
         }
     }
 }
+```
 
-In these examples, you can see how to create a map, add key-value pairs, and retrieve values based on keys. The choice of which map implementation to use depends on your specific requirements regarding ordering and performance.
+In these examples, you can see how to create a map, add key-value pairs, and retrieve values based on keys.
+
+The choice of which map implementation to use depends on your specific requirements regarding ordering and performance.
 
 ## 4. HashTable
+
 The HashTable class in Java is another implementation of the Map interface that is similar to HashMap. 
 
 However, there are some key differences, and HashTable has some characteristics that make it less commonly used in modern Java development. Here's an example:
