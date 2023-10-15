@@ -97,8 +97,7 @@ The HashTable class in Java is another implementation of the Map interface that 
 
 However, there are some key differences, and HashTable has some characteristics that make it less commonly used in modern Java development. Here's an example:
 
-java
-Copy code
+```java
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -121,14 +120,20 @@ public class HashTableExample {
         }
     }
 }
+```
 
-Important Points about HashTable:
-Synchronization: One of the main differences between HashMap and HashTable is that HashTable is synchronized. This means that all operations on the table are thread-safe. However, this comes at the cost of reduced performance.
+## Important Points about HashTable
 
-Nulls: Neither keys nor values can be null in a HashTable. If you attempt to insert a null key or value, a NullPointerException will be thrown.
+**Synchronization**: One of the main differences between HashMap and HashTable is that HashTable is synchronized. 
 
-Performance: Due to synchronization, HashTable can be slower than HashMap in a single-threaded environment. If you don't need thread safety, it's often recommended to use HashMap or other non-synchronized maps for better performance.
+This means that all operations on the table are thread-safe. However, this comes at the cost of reduced performance.
 
-Legacy: While HashTable is part of the Java Collections Framework, it's considered somewhat legacy, and newer implementations like HashMap are generally preferred for most use cases.
+**Nulls**: Neither keys nor values can be null in a HashTable. If you attempt to insert a null key or value, a NullPointerException will be thrown.
 
-In modern Java development, HashMap is often preferred over HashTable due to better performance and the ability to handle null values. However, if you specifically need thread safety, and can handle the performance trade-off, ConcurrentHashMap might be a more contemporary choice.
+**Performance**: Due to synchronization, HashTable can be slower than HashMap in a single-threaded environment. If you don't need thread safety, it's often recommended to use HashMap or other non-synchronized maps for better performance.
+
+**Legacy**: While HashTable is part of the Java Collections Framework, it's considered somewhat legacy, and newer implementations like HashMap are generally preferred for most use cases.
+
+In modern Java development, HashMap is often preferred over HashTable due to better performance and the ability to handle null values. 
+
+However, if you specifically need thread safety, and can handle the performance trade-off, ConcurrentHashMap might be a more contemporary choice.
