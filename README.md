@@ -4,7 +4,7 @@ In Java, the term "Map" refers to a data structure that stores key-value pairs.
 
 Each key is associated with exactly one value, and you can use the key to retrieve the corresponding value. 
 
-Java provides several implementations of the Map interface, but the most commonly used ones are HashMap, TreeMap, and LinkedHashMap.
+Java provides several implementations of the Map interface, but the most commonly used ones are: HashMap, TreeMap, and LinkedHashMap.
 
 ## 1. HashMap
 
