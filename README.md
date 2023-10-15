@@ -1,10 +1,20 @@
 # JavaSE-Maps
 
+## In summary
+
+Use **HashMap** if you need fast access to elements and order doesn't matter.
+
+Use **TreeMap** if you need elements sorted in a natural order.
+
+Use **LinkedHashMap** if you need to maintain the order of insertion.
+
+## --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 In Java, the term "Map" refers to a data structure that stores key-value pairs. 
 
 Each key is associated with exactly one value, and you can use the key to retrieve the corresponding value. 
 
 Java provides several implementations of the Map interface, but the most commonly used ones are: HashMap, TreeMap, and LinkedHashMap.
+## --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 1. HashMap
 
@@ -137,3 +147,52 @@ This means that all operations on the table are thread-safe. However, this comes
 In modern Java development, HashMap is often preferred over HashTable due to better performance and the ability to handle null values. 
 
 However, if you specifically need thread safety, and can handle the performance trade-off, ConcurrentHashMap might be a more contemporary choice.
+
+In Java, HashMap, TreeMap, and LinkedHashMap are all implementations of the Map interface, but they have different characteristics in terms of ordering and performance.
+
+## HashMap
+
+Does not guarantee any specific order of elements.
+
+Offers constant-time performance for basic operations (add, remove, and get), assuming the hash function distributes the elements properly.
+
+It is the most efficient for frequent insertions and lookups.
+
+```java
+Map<String, Integer> hashMap = new HashMap<>();
+hashMap.put("Alice", 25);
+hashMap.put("Bob", 30);
+hashMap.put("Charlie", 22);
+
+System.out.println(hashMap); // Output order may vary
+```
+
+## TreeMap
+
+Maintains elements in natural order (ascending order for numeric types, lexicographic order for strings).
+
+Slower insertion and removal compared to HashMap, but the elements are ordered.
+
+```java
+Map<String, Integer> treeMap = new TreeMap<>();
+treeMap.put("Alice", 25);
+treeMap.put("Bob", 30);
+treeMap.put("Charlie", 22);
+
+System.out.println(treeMap); // Output in ascending order
+```
+
+## LinkedHashMap
+
+Maintains the order of elements based on the order they were inserted.
+
+Slightly slower than HashMap for basic operations but provides predictable iteration order.
+
+```java
+Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+linkedHashMap.put("Alice", 25);
+linkedHashMap.put("Bob", 30);
+linkedHashMap.put("Charlie", 22);
+
+System.out.println(linkedHashMap); // Output in insertion order
+```
